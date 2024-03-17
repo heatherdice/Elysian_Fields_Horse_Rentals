@@ -1,5 +1,7 @@
 # Elysian_Fields_Horse_Rentals
+An advertising website for Elysian Fields Horse Rentals, which rents out horses for IHA, IHSA, and mounted archery events on the east coast. See the website design [here](https://www.figma.com/file/ZW4fp06gHpwpXkLj7kfMfv/Elysian-Fields-Horse-Rentals?type=design&node-id=0-1&mode=design&t=zwPdMDH2UvxYfegL-0).
 
+## Setting up the environment
 To set up the environment for this repo execute the following commands in sequence.
 1. npm init -y
 2. npm i express

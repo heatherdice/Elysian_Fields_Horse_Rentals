@@ -1,7 +1,7 @@
 {
   "name": "elysian_fields_horse_rentals",
   "version": "1.0.0",
-  "description": "",
+  "description": "To set up the environment for this repo execute the following commands in sequence. 1. npm init -y 2. npm i express 3. cd client 4. npm i -S react-scripts",
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
@@ -12,6 +12,5 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.3"
-  },
-  "devDependencies": {}
+  }
 }
