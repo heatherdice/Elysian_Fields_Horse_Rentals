@@ -1,9 +1,9 @@
-import { initDataStorage, companyBio } from "./storage";
+import { initDataStorage } from "./storage.js";
 
 if (initDataStorage()) 
   console.log("Data Storage Initialized Successfully.")
 
-const express = require("express");
+import express from "express";
 const PORT = process.env.PORT || 3001;
 const app = express();
 

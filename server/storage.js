@@ -1,22 +1,45 @@
-/**A default value for config.json */
-export let companyBio = {
-    members: [{membername: "Jane Doe", photo: `./photos/${membername}.jpg`, bio:"Lorem Ipsum Dolor"}],
-    companyName:"Elysian Fields",
-    companyBio: "Lorem Ipsum Dolor",
-    companyPhoto: `/photos/company.jpg`
-  }
+import { readFile } from 'fs';
+import verbose from 'sqlite3';
 
-  /**Looks for an existing config.json file and the sqlite DB.
-   * If either cannot be found, a new file is created.  This
-   * method is invoked during server startup.
-  */
-  export function initDataStorage() {
-    //TODO
-    /* 1. get config.json
-     * 2. if not found, create
-     * 3. set value of config.json to companyBio
-     * 4. connect to database
-     * 5. if file not found, create new instance and run tables.sql
-    */
-    return true;
-  }
+const db = new verbose.Database(`./server/data.db`, err => {
+  err == null 
+    ? console.log("Database Loaded Successfully")
+    : console.log(`Database Failed to Load.  ERROR: ${err}`);
+});
+
+var companyBio = {};
+
+/**Look for an existing config.json file and generate the database
+ * tables if absent.
+ * @returns {Boolean} true if all setup steps were successful
+*/
+export function initDataStorage() {
+  let initializationStatus = true;
+  let fileContents = "";
+
+  //read the config file.  
+  readFile('./server/config.json', (err, data) => {
+    if (err == null)
+      companyBio = data.toJSON()
+    else {
+      console.log(err)
+      initializationStatus = false;
+    }
+  });
+
+  //run table definition file to create, if absent, the necessary tables and relations.  
+  readFile('./server/tables.sql', (err, data) => {
+    if (err == null)
+      fileContents = data.toString()
+    else {
+      console.log(err);
+      initializationStatus = false;
+    }
+  });
+  db.exec(fileContents, err => {
+    console.log(`Table Creation Unsuccesful. ERROR: ${err}`);
+    initializationStatus = false;
+  });
+
+  return initializationStatus;
+}

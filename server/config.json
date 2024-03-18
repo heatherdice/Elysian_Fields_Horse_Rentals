@@ -1,0 +1,10 @@
+{
+    "members": [
+        {"memberName": "Jane Doe", 
+        "photo": "./photos/Jane Doe.jpg", 
+        "bio":"Lorem Ipsum Dolor"}
+    ],
+    "companyName":"Elysian Fields",
+    "companyBio": "Lorem Ipsum Dolor",
+    "companyPhoto": "./photos/company.jpg"
+  }
