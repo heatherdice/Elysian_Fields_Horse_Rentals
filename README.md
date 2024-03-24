@@ -4,7 +4,6 @@ An advertising website for Elysian Fields Horse Rentals, which rents out horses 
 ## Setting up the environment
 To set up the environment for this repo execute the following commands in sequence.
 1. npm init -y
-2. npm i express
 3. npm i sqlite3
 4. npm i fs
 5. cd client
