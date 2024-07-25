@@ -1,0 +1,25 @@
+.navbar {
+    width: 100vw;
+}
+
+.navbar, .site-title, .desktop-nav {
+    display: flex;
+}
+
+.site-title {
+    flex-direction: column;
+}
+
+.site-title span:nth-child(1) {
+    font-family: var(--title-font);
+}
+
+.site-title span:nth-child(2), .desktop-nav {
+    font-family: var(--text-font);
+}
+
+.desktop-nav {
+    list-style: none;
+    flex-direction: row;
+    justify-content: flex-end;
+}

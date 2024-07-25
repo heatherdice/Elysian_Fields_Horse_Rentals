@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { debounce } from "lodash";
 import { Link } from 'react-scroll';
+import "../styles/Navbar.css";
 
 
 export default function Navbar() {
