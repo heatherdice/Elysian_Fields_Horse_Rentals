@@ -1,20 +1,11 @@
-.navbar {
-    width: 100vw;
-}
-
-.navbar, .site-title, .desktop-nav {
+.navbar, .desktop-nav {
     display: flex;
 }
 
-.site-title {
-    flex-direction: column;
-}
-
-.site-title span:nth-child(1) {
-    font-family: var(--title-font);
-}
-
-.site-title span:nth-child(2), .desktop-nav {
+.navbar {
+    width: 100%;
+    position: fixed;
+    justify-content: flex-end;
     font-family: var(--text-font);
 }
 
@@ -22,4 +13,14 @@
     list-style: none;
     flex-direction: row;
     justify-content: flex-end;
+    font-size: 1.25em;
+}
+
+.desktop-navbar-links {
+    cursor: pointer;
+    padding: 0 1em;
+}
+
+.desktop-navbar-links:hover {
+    text-decoration: underline 0.08em black;
 }

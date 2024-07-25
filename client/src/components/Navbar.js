@@ -43,11 +43,6 @@ export default function Navbar() {
     return (
         <>
             <nav className="navbar">
-                <p className="site-title">
-                    <span>Elysian Fields</span>
-                    <span>Horse Rentals</span>
-                </p>
-
                 {screenType === 'desktop' ? (
                     <ul className="desktop-nav">
                         {navLinks.map((navbar) =>
