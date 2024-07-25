@@ -12,7 +12,6 @@
 .desktop-nav {
     list-style: none;
     flex-direction: row;
-    justify-content: flex-end;
     font-size: 1.25em;
 }
 
