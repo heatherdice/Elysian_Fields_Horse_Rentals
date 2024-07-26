@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
-import { debounce } from "lodash";
+import React, { useEffect, useState, useCallback } from "react";
+import _ from "lodash";
 import { Link } from 'react-scroll';
 import "../styles/Navbar.css";
 
@@ -7,23 +7,20 @@ import "../styles/Navbar.css";
 export default function Navbar() {
     const [screenType, setScreenType] = useState(window.innerWidth <= 600 ? 'mobile' : 'desktop');
 
-    const debouncedHandleResize = useRef(
-        debounce(() => {
-            setScreenType(window.innerWidth <= 600 ? 'mobile' : 'desktop');
-        }, 300)).current;
+    const handleResize = useCallback(_.debounce(() => {
+        setScreenType(window.innerWidth <= 600 ? 'mobile' : 'desktop');
 
-    const handleResize = useCallback(() => {
-        debouncedHandleResize();
-        }, [debouncedHandleResize]);
+        console.log(screenType);
+
+    }, 300), [screenType]);
 
     useEffect(() => {
         window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('resize', handleResize);
-            debouncedHandleResize.cancel();
         };
-    }, [handleResize, debouncedHandleResize]);
+    }, [handleResize]);
 
     const navLinks = [
         {
@@ -60,4 +57,3 @@ export default function Navbar() {
         </>
     )
 }
-

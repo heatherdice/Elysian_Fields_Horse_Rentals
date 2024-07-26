@@ -1,11 +1,11 @@
 .navbar, .desktop-nav {
     display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 .navbar {
-    width: 100%;
     position: fixed;
-    justify-content: flex-end;
     font-family: var(--text-font);
 }
 
@@ -15,11 +15,18 @@
     font-size: 1.25em;
 }
 
-.desktop-navbar-links {
+.desktop-navbar-links, .menu {
     cursor: pointer;
     padding: 0 1em;
 }
 
-.desktop-navbar-links:hover {
+.desktop-navbar-links:hover, .menu:hover {
     text-decoration: underline 0.08em black;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        font-size: 1.25em;
+        margin: 1em 0;
+    }
 }
