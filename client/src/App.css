@@ -7,3 +7,11 @@
   --title-font: 'Eagle Lake', cursive;
   --text-font: 'Montserrat', sans-serif;
 }
+
+h1 {
+  font-family: var(--title-font);
+}
+
+h2 {
+  font-family: var(--text-font);
+}
