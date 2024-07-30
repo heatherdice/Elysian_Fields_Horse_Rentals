@@ -1,9 +1,11 @@
 import React from "react";
+import Hero from "../components/Hero";
+import homeHero from "../assets/homeHero.jpg"
 
 export default function Home() {
     return (
         <>
-            THIS IS THE HOME PAGE
+            <Hero image={homeHero} />
         </>
     )
 }

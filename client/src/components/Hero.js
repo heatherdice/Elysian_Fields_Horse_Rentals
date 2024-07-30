@@ -1,9 +1,8 @@
 import React from "react";
-import heroImage from "../assets/heroImage.jpg";
 
-export default function Hero() {
+export default function Hero(image) {
     return(
-        <div style={{backgroundImage: `url(${heroImage})`}}>
+        <div style={{backgroundImage: image}} className="heroImage">
             <h1 style={
                 {marginLeft: "60px", 
                 marginTop: "50px", 
