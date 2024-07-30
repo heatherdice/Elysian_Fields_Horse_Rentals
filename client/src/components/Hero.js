@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Hero(image) {
+export default function Hero({ image }) {
     return(
-        <div style={{backgroundImage: image}} className="heroImage">
+        <div style={{ backgroundImage: `url(${image})` }} className="heroImage">
             <h1 style={
                 {marginLeft: "60px", 
-                marginTop: "50px", 
+                paddingTop: "50px", 
                 marginBottom: "0", 
                 fontSize: "3em"}
             }>
@@ -15,7 +15,8 @@ export default function Hero(image) {
                 {marginLeft: "60px", 
                 marginTop: "16px", 
                 fontSize: "2em", 
-                fontWeight: "normal"}
+                fontWeight: "normal",
+                paddingBottom: "50px"}
             }>
                 Horse Rentals
             </h2>
