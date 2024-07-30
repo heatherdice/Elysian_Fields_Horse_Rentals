@@ -4,7 +4,8 @@ export default function Hero({ image }) {
     return(
         <div style={{ backgroundImage: `url(${image})` }} className="heroImage">
             <h1 style={
-                {marginLeft: "60px", 
+                {marginLeft: "60px",
+                marginTop: "0", 
                 paddingTop: "50px", 
                 marginBottom: "0", 
                 fontSize: "3em"}
