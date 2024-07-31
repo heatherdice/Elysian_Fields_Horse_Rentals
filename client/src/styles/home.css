@@ -1,0 +1,26 @@
+.home-section-1, .horses-link {
+    color: var(--platinum);
+}
+
+.home-section-1 {
+    background-color: var(--hunter-green);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    row-gap: 1em;
+    text-align: center;
+}
+
+section.home-section-1 > h3, section.home-section-1 > p {
+    margin: 0;
+    padding: 2em;
+    place-self: center;
+}
+
+section.home-section-1 > h3 {
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+section.home-section-1 > p {
+    font-size: 2em;
+}
