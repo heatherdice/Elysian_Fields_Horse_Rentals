@@ -8,11 +8,11 @@
   --text-font: 'Montserrat', sans-serif;
 }
 
-h1 {
+h1, h3 {
   font-family: var(--title-font);
 }
 
-h2 {
+h2, p {
   font-family: var(--text-font);
 }
 
