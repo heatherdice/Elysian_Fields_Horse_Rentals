@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
 import homeHero from "../assets/homeHero.jpg"
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -13,6 +14,8 @@ export default function Home() {
                 </h3>
                 <p style={{fontSize: "2em", padding: "2em", placeSelf: "center"}}>
                     Elysian Fields Horse Rentals has been renting out horses for competition and pleasure for [x years]. Our horses are trained to be calm, focused, and non-reactive to outside stimuli, ensuring a safe and enjoyable ride! From small local schooling shows to big exciting IHSA competitions, our horses have done it all.
+                    <br />
+                    <Link to="/about">Meet Our Horses</Link>
                 </p>
             </section>
         </>
