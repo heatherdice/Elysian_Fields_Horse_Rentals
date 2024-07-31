@@ -5,7 +5,7 @@ import homeHero from "../assets/homeHero.jpg"
 export default function Home() {
     return (
         <>
-            <Hero image={homeHero} />
+            <Hero image={homeHero} title="Elysian Fields" subtitle="Horse Rentals" />
         </>
     )
 }
