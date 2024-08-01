@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
+import { NavLink } from "react-router-dom";
 import _ from "lodash";
-import { Link } from 'react-scroll';
 import "../styles/Navbar.css";
 
 
@@ -24,7 +24,7 @@ export default function Navbar() {
 
     const navLinks = [
         {
-            link: 'about',
+            link: '/about',
             title: 'About'
         },
         {
@@ -44,9 +44,9 @@ export default function Navbar() {
                     <ul className="desktop-nav">
                         {navLinks.map((navbar) =>
                             <li key={navbar.title} className="desktop-navbar-links">
-                                <Link to={navbar.link} smooth={true} duration={500}>
+                                <NavLink to={navbar.link}>
                                     {navbar.title}
-                                </Link>
+                                </NavLink>
                             </li>
                         )}
                     </ul>
