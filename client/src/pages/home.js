@@ -1,21 +1,24 @@
 import React from "react";
+import "../styles/home.css";
 import Hero from "../components/Hero";
 import homeHero from "../assets/homeHero.jpg"
 import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Home() {    
     return (
         <>
-            <Hero image={homeHero} title="Elysian Fields" subtitle="Horse Rentals" />
+            <Hero image={homeHero} homePage={true} />
 
-            <section style={{backgroundColor: "var(--hunter-green)", color: "var(--platinum)", display: "grid", gridTemplateColumns: "40% 60%", rowGap: "1em", textAlign: "center", height: "60vh"}}>
-                <h3 style={{fontSize: "2.5em", fontWeight: "normal", margin: "0", padding: "2em", placeSelf: "center"}}>
+            <section className="home-section-1">
+                <h3>
                     Horses suitable for IHA, IHSA, mounted archery, and more!
                 </h3>
-                <p style={{fontSize: "2em", padding: "2em", placeSelf: "center"}}>
+                <p>
                     Elysian Fields Horse Rentals has been renting out horses for competition and pleasure for [x years]. Our horses are trained to be calm, focused, and non-reactive to outside stimuli, ensuring a safe and enjoyable ride! From small local schooling shows to big exciting IHSA competitions, our horses have done it all.
                     <br />
-                    <Link to="/about">Meet Our Horses</Link>
+                    <br />
+
+                    <Link to="/about" className="horses-link">Meet Our Horses</Link>
                 </p>
             </section>
         </>

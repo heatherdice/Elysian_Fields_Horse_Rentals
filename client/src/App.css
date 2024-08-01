@@ -8,11 +8,11 @@
   --text-font: 'Montserrat', sans-serif;
 }
 
-h1, h3 {
+h1, h3, .site-title {
   font-family: var(--title-font);
 }
 
-h2, p {
+h2, p, .site-subtitle {
   font-family: var(--text-font);
 }
 
@@ -28,4 +28,26 @@ h2, p {
   margin-left: 60px;
 }
 
+/* color is temporary */
+.site-title {
+  /* margin-top: 0;
+  padding-top: 50px;
+  margin-bottom: 0;
+  font-size: 3em; */
+  text-decoration: none;
+  color: white;
+}
 
+.site-title, div.hero-text-home > h1 {
+  margin-top: 0;
+  padding-top: 50px;
+  margin-bottom: 0;
+  font-size: 3em
+}
+
+div.hero-text > h2, .site-subtitle {
+  margin-top: 16px;
+  font-size: 2em;
+  font-weight: normal;
+  padding-bottom: 50px;
+}
