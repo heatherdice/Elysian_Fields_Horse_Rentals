@@ -1,26 +1,28 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-export default function Hero({ image, title, subtitle }) {
+export default function Hero({ image, homePage, title }) {
     return(
         <div style={{ backgroundImage: `url(${image})` }} className="hero-image">
-            <div className="hero-text">
-                <h1 style={
-                    {marginTop: "0", 
-                    paddingTop: "50px", 
-                    marginBottom: "0", 
-                    fontSize: "3em"}
-                }>
-                    {title}
-                </h1>
-                <h2 style={
-                    {marginTop: "16px", 
-                    fontSize: "2em", 
-                    fontWeight: "normal",
-                    paddingBottom: "50px"}
-                }>
-                    {subtitle}
-                </h2>
-            </div>
+            {homePage === true ? (
+                <div className="hero-text-home">
+                    <h1>
+                        Elysian Fields
+                    </h1>
+                    <h2>
+                        Horse Rentals
+                    </h2>
+                </div>
+            ) : (
+                <div className="hero-text">
+                    <NavLink to="/" className="site-title">Elysian Fields</NavLink>
+                    <p className="site-subtitle">
+                        Horse Rentals
+                    </p>
+                    <h1>{title}</h1>
+                </div>
+            )}
+
         </div>
     )
 }
