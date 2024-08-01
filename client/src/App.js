@@ -4,16 +4,18 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import About from "./pages/about";
+import Horses from "./pages/horses";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-
       <BrowserRouter>
+        <Navbar />
+
         <Routes>
-          <Route index element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/horses" element={<Horses />} />
         </Routes>
       </BrowserRouter>
     </div>
