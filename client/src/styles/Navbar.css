@@ -17,11 +17,15 @@
 }
 
 .desktop-navbar-links, .menu {
-    cursor: pointer;
     padding: 0 1em;
 }
 
-.desktop-navbar-links:hover, .menu:hover {
+.navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar a:hover, .menu:hover {
     text-decoration: underline 0.08em black;
 }
 
