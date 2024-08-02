@@ -28,11 +28,11 @@ export default function Navbar() {
             title: 'About'
         },
         {
-            link: 'book-a-horse',
+            link: '/book-a-horse',
             title: 'Book a Horse'
         },
         {
-            link: 'event-calendar',
+            link: '/event-calendar',
             title: 'Event Calendar'
         }
     ];
