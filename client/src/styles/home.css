@@ -2,25 +2,33 @@
     color: var(--platinum);
 }
 
+.home-section-1, .testimonials {
+    display: grid;
+    text-align: center;
+    row-gap: 1em;
+    padding: 2.5em;
+}
+
 .home-section-1 {
     background-color: var(--hunter-green);
-    display: grid;
     grid-template-columns: 40% 60%;
-    row-gap: 1em;
-    text-align: center;
 }
 
 section.home-section-1 > h3, section.home-section-1 > p {
     margin: 0;
-    padding: 2em;
     place-self: center;
 }
 
-section.home-section-1 > h3 {
+.home-section-1 h3, .testimonials h3 {
     font-size: 2.5em;
     font-weight: normal;
 }
 
-section.home-section-1 > p {
+.home-section-1 p, .testimonials p {
     font-size: 2em;
+}
+
+.testimonials {
+    grid-template-columns: 50% 50%;
+    color: var(--english-violet);
 }

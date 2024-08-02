@@ -21,6 +21,21 @@ export default function Home() {
                     <Link to="/about" className="horses-link">Meet Our Horses</Link>
                 </p>
             </section>
+
+            <section className="testimonials">
+                <h3>Testimonials</h3>
+                <p>
+                    "Kellie's horses are the calmest I've ever seen! This was my first mounted archery lesson and I never had to worry that a horse would spook. He took great care of me and I had a blast!"
+                    <br />
+                    - Reviewer 1
+                </p>
+
+                <p>
+                    "Riding a strange horse is always the part of competing in the IHA that makes me the most nervous, but any time I'm riding an Elysian Fields horse, I am instantly at ease! These horses really know what they're doing!"
+                    <br />
+                    - Reviewer 2
+                </p>
+            </section>
         </>
     )
 }
