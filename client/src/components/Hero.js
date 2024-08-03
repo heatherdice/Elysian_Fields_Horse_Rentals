@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Hero({ image, homePage, title }) {
     return(
-        <header style={{ backgroundImage: `url(${image})` }} className="hero-image">
+        <header style={{ backgroundImage: `url(${image})` }} className="Hero">
             {homePage === true ? (
                 <div className="hero-text-home">
                     <h1>
