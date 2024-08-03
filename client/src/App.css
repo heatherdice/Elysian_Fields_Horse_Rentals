@@ -6,12 +6,11 @@
   --hunter-green: #426450;
   --title-font: 'Eagle Lake', cursive;
   --text-font: 'Montserrat', sans-serif;
-  --page-padding: 3.5em;
 }
 
 .App {
-  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 h1, h3, .site-title {
@@ -23,11 +22,15 @@ h2, h4, p, .site-subtitle {
 }
 
 .Hero {
-  padding: var(--page-padding);
+  width: 100%;
   height: 70vh;
   background-position: 50% 25%;
   background-size: cover;
   background-repeat: no repeat;
+}
+
+.hero-text-home, .hero-text {
+  margin-left: 60px;
 }
 
 .site-title {
@@ -36,6 +39,7 @@ h2, h4, p, .site-subtitle {
 
 .site-title, div.hero-text-home > h1 {
   margin-top: 0;
+  padding-top: 50px;
   margin-bottom: 0;
   font-size: 3em
 }
