@@ -6,6 +6,7 @@
 
 .Navbar {
     top: 0;
+    left: 0;
     position: absolute;
     font-family: var(--text-font);
 }
