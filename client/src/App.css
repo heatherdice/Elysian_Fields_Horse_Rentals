@@ -50,3 +50,34 @@ h2, h4, p, .site-subtitle {
   font-weight: normal;
   padding-bottom: 50px;
 }
+
+footer {
+  padding: 3.5em;
+  display: grid;
+  column-gap: 3em;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+footer h3, footer h4 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+footer h4 {
+  font-weight: normal;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+footer li {
+  margin: 0.5em 0;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-size: 1.25em;
+}

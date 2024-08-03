@@ -13,13 +13,13 @@ export default function Footer({ backgroundColor, textColor }) {
                 <h3>Explore</h3>
                 <ul>
                     <li>
-                        <NavLink to="/about">About</NavLink>
+                        <NavLink to="/about" className="footer-link" style={{ color: textColor }}>About</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/affiliates">Affiliates</NavLink>
+                        <NavLink to="/affiliates" className="footer-link" style={{ color: textColor }}>Affiliates</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/calendar">Calendar</NavLink>
+                        <NavLink to="/calendar" className="footer-link" style={{ color: textColor }}>Calendar</NavLink>
                     </li>
                 </ul>
             </div>
@@ -28,13 +28,13 @@ export default function Footer({ backgroundColor, textColor }) {
                 <h3>Book</h3>
                 <ul>
                     <li>
-                        <NavLink to="/book-a-horse">All Horses</NavLink>
+                        <NavLink to="/book-a-horse" className="footer-link" style={{ color: textColor }}>All Horses</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/book-a-horse/archery">Archery Horses</NavLink>
+                        <NavLink to="/book-a-horse/archery" className="footer-link" style={{ color: textColor }}>Archery Horses</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/book-a-horse/jumper">Jumper Horses</NavLink>
+                        <NavLink to="/book-a-horse/jumper" className="footer-link" style={{ color: textColor }}>Jumper Horses</NavLink>
                     </li>
                 </ul>
             </div>
@@ -43,10 +43,10 @@ export default function Footer({ backgroundColor, textColor }) {
                 <h3>Connect</h3>
                 <ul>
                     <li>
-                        <a href="mailto:">Contact Us</a>
+                        <a href="mailto:" className="footer-link" style={{ color: textColor }}>Contact Us</a>
                     </li>
                     <li>
-                        Social Media
+                        <span className="footer-link">Social Media</span>
                     </li>
                 </ul>
             </div>
