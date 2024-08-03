@@ -24,12 +24,13 @@
     font-weight: normal;
 }
 
-.home-section-1 p, .testimonials p {
+.home-section-1 p {
     font-size: 2em;
 }
 
 .testimonials {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
     color: var(--english-violet);
     width: 100%;
     height: 100%;
@@ -37,4 +38,13 @@
     background-repeat: no-repeat;
     background-color: var(--platinum);
     background-blend-mode: overlay;
+    box-sizing: border-box;
+}
+
+.testimonials h3 {
+    grid-column: span 2;
+}
+
+.testimonials p {
+    font-size: 1.5em;
 }
