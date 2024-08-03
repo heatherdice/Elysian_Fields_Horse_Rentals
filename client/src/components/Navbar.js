@@ -39,7 +39,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="navbar">
+            <nav className="Navbar">
                 {screenType === 'desktop' ? (
                     <ul className="desktop-nav">
                         {navLinks.map((navbar) =>
