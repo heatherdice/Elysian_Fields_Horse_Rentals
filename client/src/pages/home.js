@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/home.css";
 import Hero from "../components/Hero";
-import homeHero from "../assets/homeHero.jpg"
+import homeHero from "../assets/homeHero.jpg";
+import horseArcherHome from "../assets/horseArcherHome.jpg";
 import { Link } from "react-router-dom";
 
 export default function Home() {    
@@ -22,7 +23,7 @@ export default function Home() {
                 </p>
             </section>
 
-            <section className="testimonials">
+            <section className="testimonials" style={{ backgroundImage: `url(${horseArcherHome})` }}>
                 <h3>Testimonials</h3>
                 <p>
                     "Kellie's horses are the calmest I've ever seen! This was my first mounted archery lesson and I never had to worry that a horse would spook. He took great care of me and I had a blast!"
