@@ -3,6 +3,7 @@ import "../styles/home.css";
 import Hero from "../components/Hero";
 import homeHero from "../assets/homeHero.jpg";
 import horseArcherHome from "../assets/horseArcherHome.jpg";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 export default function Home() {    
@@ -37,6 +38,8 @@ export default function Home() {
                     - Reviewer 2
                 </p>
             </section>
+
+            <Footer backgroundColor="var(--english-violet)" textColor="var(--platinum)" />
         </>
     )
 }
