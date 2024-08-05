@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Horses from "./pages/horses";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/horses" element={<Horses />} />
         </Routes>
+
+        <Footer backgroundColor="var(--english-violet)" textColor="var(--platinum)" />
       </BrowserRouter>
     </div>
   );

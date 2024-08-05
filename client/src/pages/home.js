@@ -40,8 +40,6 @@ export default function Home() {
                     </p>
                 </section>
             </main>
-
-            <Footer backgroundColor="var(--english-violet)" textColor="var(--platinum)" />
         </>
     )
 }
