@@ -1,14 +1,17 @@
 .Navbar, .desktop-nav {
     display: flex;
-    width: 100%;
     justify-content: flex-end;
 }
 
 .Navbar {
-    top: 0;
-    left: 0;
+    width: 100%;
+    justify-content: space-between;
     position: absolute;
     font-family: var(--text-font);
+}
+
+.navbar-logo {
+    margin: 20px 0 20px 60px;
 }
 
 .desktop-nav {
@@ -26,7 +29,7 @@
     text-decoration: none;
 }
 
-.Navbar a:hover, .menu:hover {
+.Navbar li a:hover, .menu:hover {
     text-decoration: underline 0.08em black;
 }
 

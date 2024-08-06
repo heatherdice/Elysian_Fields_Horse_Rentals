@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { NavLink } from "react-router-dom";
 import _ from "lodash";
 import "../styles/Navbar.css";
@@ -7,15 +7,17 @@ import "../styles/Navbar.css";
 export default function Navbar() {
     const [screenType, setScreenType] = useState(window.innerWidth <= 600 ? 'mobile' : 'desktop');
 
-    const handleResize = useCallback(_.debounce(() => {
-        setScreenType(window.innerWidth <= 600 ? 'mobile' : 'desktop');
+    const handleResize = () => {
+        const newScreenType = window.innerWidth <= 600 ? 'mobile' : 'desktop';
+        setScreenType(newScreenType);
 
-        console.log(screenType);
+        console.log(newScreenType);
+        console.log(window.innerWidth);
+    };
 
-    }, 300), [screenType]);
-
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.addEventListener('resize', handleResize);
+        handleResize();
 
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -41,17 +43,36 @@ export default function Navbar() {
         <>
             <nav className="Navbar">
                 {screenType === 'desktop' ? (
-                    <ul className="desktop-nav">
-                        {navLinks.map((navbar) =>
-                            <li key={navbar.title} className="desktop-navbar-links">
-                                <NavLink to={navbar.link}>
-                                    {navbar.title}
-                                </NavLink>
-                            </li>
-                        )}
-                    </ul>
+                    <>
+                        <div className="navbar-logo">
+                            <NavLink to="/" className="site-title">Elysian Fields</NavLink>
+                            <p className="site-subtitle">
+                                Horse Rentals
+                            </p>
+                        </div>
+                
+                        <ul className="desktop-nav">
+                            {navLinks.map((navbar) =>
+                                <li key={navbar.title} className="desktop-navbar-links">
+                                    <NavLink to={navbar.link}>
+                                        {navbar.title}
+                                    </NavLink>
+                                </li>
+                            )}
+                        </ul>
+
+                    </>
                 ) : (
-                    <div className="menu">Menu</div>
+                    <>
+                        <div className="navbar-logo">
+                            <NavLink to="/" className="site-title">Elysian Fields</NavLink>
+                            <p className="site-subtitle">
+                                Horse Rentals
+                            </p>
+                        </div>
+
+                        <div className="menu">Menu</div>
+                    </>
                 )}
             </nav>
         </>
