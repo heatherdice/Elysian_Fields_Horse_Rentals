@@ -8,14 +8,19 @@ import _ from "lodash";
 // .Navbar
 const NavbarContainer = styled.nav`
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     width: 100%;
     position: absolute;
     font-family: var(--text-font);
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 `;
 
 // .navbar-logo
 const Logo = styled.div`
-    margin: 20px 0 20px 60px;
+    margin: 20px 0 20px 30px;
 `;
 
 // .site-title
@@ -25,6 +30,7 @@ const SiteTitle = styled.a`
     padding-top: 50px;
     margin-bottom: 0;
     font-size: 3em;
+    font-family: var(--title-font);
 `;
 
 // .site-subtitle
@@ -36,6 +42,7 @@ const SiteSubtitle = styled.h4`
 `;
 
 const NavLinks = styled.div`
+    margin-top: 2em;
     a {
         color: black;
         text-decoration: none;
