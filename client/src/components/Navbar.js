@@ -67,9 +67,11 @@ export default function Navbar() {
             </Logo>
 
             <NavLinks>
-                <a href="/about">About</a>
-                <a href="/book-a-horse">Book a Horse</a>
-                <a href="/event-calendar">Event Calendar</a>
+                {navLinks.map((navbar) =>
+                    <a key={navbar.title} href={navbar.link}>
+                        {navbar.title}
+                    </a>
+                )}
             </NavLinks>
         </NavbarContainer>
     )
