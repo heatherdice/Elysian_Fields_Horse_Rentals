@@ -8,14 +8,11 @@ import _ from "lodash";
 // .Navbar
 const NavbarContainer = styled.nav`
     display: flex;
+    width: 100%;
     justify-content: space-between;
     flex-direction: row;
-    width: 100%;
     position: absolute;
     font-family: var(--text-font);
-    @media (max-width: 600px) {
-        flex-direction: column;
-    }
 `;
 
 // .navbar-logo
@@ -43,6 +40,7 @@ const SiteSubtitle = styled.h4`
 
 const NavLinks = styled.div`
     margin-top: 2em;
+    margin-left: auto;
     a {
         color: black;
         text-decoration: none;
