@@ -77,11 +77,18 @@ const DropdownMenu = styled.div`
     display: flex;
     flex-direction: column;
     text-align: right;
+    background-color: var(--champagne-pink);
+    border-radius: 3px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
     a {
         color: black;
         text-decoration: none;
         font-size: 1.25em;
         padding: .75em;
+        &:hover {
+            text-decoration: underline 0.08em black;
+            cursor: pointer;
+        }
     }
 `;
 
@@ -96,6 +103,16 @@ export default function Navbar() {
         console.log(newScreenType);
         console.log(window.innerWidth);
     };
+
+    useLayoutEffect(() => {
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [handleResize]);
+
 
     const toggleDropdown = () => {
         setDropdownVisible(!dropdownVisible);
