@@ -5,7 +5,7 @@ import _ from "lodash";
 // import "../styles/Navbar.css";
 
 
-// .Navbar
+// previously .Navbar
 const NavbarContainer = styled.nav`
     display: flex;
     width: 100%;
@@ -15,12 +15,12 @@ const NavbarContainer = styled.nav`
     font-family: var(--text-font);
 `;
 
-// .navbar-logo
+// previously .navbar-logo
 const Logo = styled.div`
     margin: 20px 0 20px 30px;
 `;
 
-// .site-title
+// previously .site-title
 const SiteTitle = styled.a`
     text-decoration: none;
     margin-top: 0;
@@ -30,7 +30,7 @@ const SiteTitle = styled.a`
     font-family: var(--title-font);
 `;
 
-// .site-subtitle
+// previously .site-subtitle
 const SiteSubtitle = styled.h4`
     margin-top: 16px;
     font-size: 2em;
@@ -53,8 +53,53 @@ const NavLinks = styled.div`
     }
 `;
 
+// mobile nav styling
+const DropdownContainer = styled.div`
+    margin-top: 2em;
+    margin-right: 1.875em;
+    display: flex;
+    flex-direction: column;
+`;
+
+const MenuButton = styled.button`
+    border: none;
+    background: none;
+    text-align: right;
+    font-family: var(--text-font);
+    font-size: 1.5em;
+    &:hover {
+        text-decoration: underline 0.08em black;
+        cursor: pointer;
+    }
+`;
+
+const DropdownMenu = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.25em;
+        padding: .75em;
+    }
+`;
+
 export default function Navbar() {
-    // const [screenType, setScreenType] = useState(window.innerWidth <= 900 ? 'mobile' : 'desktop');
+    const [screenType, setScreenType] = useState(window.innerWidth <= 900 ? 'mobile' : 'desktop');
+    const [dropdownVisible, setDropdownVisible] = useState(false);
+
+    const handleResize = () => {
+        const newScreenType = window.innerWidth <= 900 ? 'mobile' : 'desktop';
+        setScreenType(newScreenType);
+
+        console.log(newScreenType);
+        console.log(window.innerWidth);
+    };
+
+    const toggleDropdown = () => {
+        setDropdownVisible(!dropdownVisible);
+    } 
 
     const navLinks = [
         {link: '/about', title: 'About'},
@@ -69,13 +114,31 @@ export default function Navbar() {
                 <SiteSubtitle>Horse Rentals</SiteSubtitle>
             </Logo>
 
-            <NavLinks>
-                {navLinks.map((navbar) =>
-                    <NavLink to={navbar.link}>
-                        {navbar.title}
-                    </NavLink>
-                )}
-            </NavLinks>
+            {screenType === 'desktop' ? (
+                <NavLinks>
+                    {navLinks.map((navbar) =>
+                        <NavLink to={navbar.link}>
+                            {navbar.title}
+                        </NavLink>
+                    )}
+                </NavLinks>
+            ) : (
+                <DropdownContainer>
+                    <MenuButton onClick={toggleDropdown}>
+                        Menu
+                    </MenuButton>
+
+                    {dropdownVisible && (
+                        <DropdownMenu>
+                            {navLinks.map((navbar) =>
+                                <NavLink to={navbar.link}>
+                                    {navbar.title}
+                                </NavLink>
+                            )}
+                        </DropdownMenu>
+                    )}
+                </DropdownContainer>
+            )}
         </NavbarContainer>
     )
 }
