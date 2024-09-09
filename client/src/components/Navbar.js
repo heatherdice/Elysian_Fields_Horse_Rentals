@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from "react";
 import styled from "styled-components";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import _ from "lodash";
 // import "../styles/Navbar.css";
 
@@ -48,11 +48,14 @@ const NavLinks = styled.div`
         padding: 0 1em;
         &:hover {
             text-decoration: underline 0.08em black;
+            cursor: pointer;
         }
     }
 `;
 
 export default function Navbar() {
+    // const [screenType, setScreenType] = useState(window.innerWidth <= 900 ? 'mobile' : 'desktop');
+
     const navLinks = [
         {link: '/about', title: 'About'},
         {link: '/book-a-horse', title: 'Book a Horse'},
@@ -68,15 +71,14 @@ export default function Navbar() {
 
             <NavLinks>
                 {navLinks.map((navbar) =>
-                    <a key={navbar.title} href={navbar.link}>
+                    <NavLink to={navbar.link}>
                         {navbar.title}
-                    </a>
+                    </NavLink>
                 )}
             </NavLinks>
         </NavbarContainer>
     )
 }
-
 
 // export default function Navbar() {
 //     const [screenType, setScreenType] = useState(window.innerWidth <= 600 ? 'mobile' : 'desktop');
