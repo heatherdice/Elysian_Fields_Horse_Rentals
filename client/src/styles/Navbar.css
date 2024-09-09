@@ -1,59 +1,59 @@
-.Navbar, .desktop-nav {
+/* .Navbar, .desktop-nav {
     display: flex;
     justify-content: flex-end;
-}
+} */
 
-.Navbar {
+/* .Navbar {
     width: 100%;
     justify-content: space-between;
     position: absolute;
     font-family: var(--text-font);
-}
+} */
 
-.navbar-logo {
+/* .navbar-logo {
     margin: 20px 0 20px 60px;
-}
+} */
 
-.site-title {
+/* .site-title {
     text-decoration: none;
-}
+} */
 
-.site-title, div.hero-text-home > h1 {
+/* .site-title, div.hero-text-home > h1 {
     margin-top: 0;
     padding-top: 50px;
     margin-bottom: 0;
     font-size: 3em
-}
+} */
 
-.hero-text-home h2, .site-subtitle {
+/* .hero-text-home h2, .site-subtitle {
     margin-top: 16px;
     font-size: 2em;
     font-weight: normal;
     padding-bottom: 50px;
-}
+} */
 
-.desktop-nav {
+/* .desktop-nav {
     list-style: none;
     flex-direction: row;
     font-size: 1.25em;
-}
+} */
 
-.desktop-navbar-links, .menu {
+/* .desktop-navbar-links, .menu {
     padding: 0 1em;
-}
+} */
 
-.Navbar a {
+/* .Navbar a {
     color: black;
     text-decoration: none;
-}
+} */
 
-.Navbar li a:hover, .menu:hover {
+/* .Navbar li a:hover, .menu:hover {
     text-decoration: underline 0.08em black;
-}
+} */
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .menu {
         font-size: 1.25em;
         margin: 1em 0;
     }
-}
+} */
