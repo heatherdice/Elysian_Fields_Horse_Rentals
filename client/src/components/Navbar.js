@@ -17,25 +17,39 @@ const NavbarContainer = styled.nav`
 
 // previously .navbar-logo
 const Logo = styled.div`
-    margin: 20px 0 20px 30px;
+    margin: 1.25em 0 1.25em 1.875em;
 `;
 
 // previously .site-title
 const SiteTitle = styled.a`
     text-decoration: none;
+    color: black;
     margin-top: 0;
-    padding-top: 50px;
+    padding-top: 3.125em;
     margin-bottom: 0;
     font-size: 3em;
     font-family: var(--title-font);
+    @media (max-width: 900px) {
+        font-size: 2em;
+    }
+    @media (max-width: 425px) {
+        font-size: 1.75em;
+    }
 `;
 
 // previously .site-subtitle
 const SiteSubtitle = styled.h4`
-    margin-top: 16px;
+    margin-top: 1em;
     font-size: 2em;
     font-weight: normal;
     padding-bottom: 50px;
+    @media (max-width: 900px) {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+    }
+    @media (max-width: 425px) {
+        font-size: 1em;
+    }
 `;
 
 const NavLinks = styled.div`
@@ -60,7 +74,6 @@ const DropdownContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
-
 const MenuButton = styled.button`
     border: none;
     background: none;
@@ -71,8 +84,10 @@ const MenuButton = styled.button`
         text-decoration: underline 0.08em black;
         cursor: pointer;
     }
+    @media (max-width: 425px) {
+        font-size: 1em;
+    }
 `;
-
 const DropdownMenu = styled.div`
     display: flex;
     flex-direction: column;
@@ -93,17 +108,17 @@ const DropdownMenu = styled.div`
 `;
 
 export default function Navbar() {
+    // set useState vars for screen type & dropdown
     const [screenType, setScreenType] = useState(window.innerWidth <= 900 ? 'mobile' : 'desktop');
     const [dropdownVisible, setDropdownVisible] = useState(false);
 
+    // set new screen size
     const handleResize = () => {
         const newScreenType = window.innerWidth <= 900 ? 'mobile' : 'desktop';
         setScreenType(newScreenType);
-
-        console.log(newScreenType);
-        console.log(window.innerWidth);
     };
 
+    // call resize function on window resize event
     useLayoutEffect(() => {
         window.addEventListener('resize', handleResize);
         handleResize();
@@ -113,7 +128,7 @@ export default function Navbar() {
         };
     }, [handleResize]);
 
-
+    // open dropdown menu
     const toggleDropdown = () => {
         setDropdownVisible(!dropdownVisible);
     } 
@@ -127,7 +142,7 @@ export default function Navbar() {
     return (
         <NavbarContainer>
             <Logo>
-                <SiteTitle>Elysian Fields</SiteTitle>
+                <SiteTitle href="/">Elysian Fields</SiteTitle>
                 <SiteSubtitle>Horse Rentals</SiteSubtitle>
             </Logo>
 
