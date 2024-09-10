@@ -1,9 +1,18 @@
 import React, { useState, useLayoutEffect } from "react";
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 import { NavLink } from "react-router-dom";
 import _ from "lodash";
 // import "../styles/Navbar.css";
 
+// consolidated styling
+const sharedLinkStyles = css`
+    color: black;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline 0.08em black;
+        cursor: pointer;
+    }
+`;
 
 // previously .Navbar
 const NavbarContainer = styled.nav`
@@ -56,14 +65,9 @@ const NavLinks = styled.div`
     margin-top: 2em;
     margin-left: auto;
     a {
-        color: black;
-        text-decoration: none;
+        ${sharedLinkStyles}
         font-size: 1.25em;
         padding: 0 1em;
-        &:hover {
-            text-decoration: underline 0.08em black;
-            cursor: pointer;
-        }
     }
 `;
 
@@ -80,10 +84,7 @@ const MenuButton = styled.button`
     text-align: right;
     font-family: var(--text-font);
     font-size: 1.5em;
-    &:hover {
-        text-decoration: underline 0.08em black;
-        cursor: pointer;
-    }
+    ${sharedLinkStyles}
     @media (max-width: 425px) {
         font-size: 1em;
     }
@@ -96,14 +97,9 @@ const DropdownMenu = styled.div`
     border-radius: 3px;
     box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
     a {
-        color: black;
-        text-decoration: none;
+        ${sharedLinkStyles}
         font-size: 1.25em;
         padding: .75em;
-        &:hover {
-            text-decoration: underline 0.08em black;
-            cursor: pointer;
-        }
     }
 `;
 
