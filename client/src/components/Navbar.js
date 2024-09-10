@@ -1,8 +1,6 @@
 import React, { useState, useLayoutEffect } from "react";
 import { styled, css } from "styled-components";
 import { NavLink } from "react-router-dom";
-import _ from "lodash";
-// import "../styles/Navbar.css";
 
 // consolidated styling
 const sharedLinkStyles = css`
