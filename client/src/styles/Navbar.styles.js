@@ -34,7 +34,7 @@ const SiteTitle = styled.a`
     @media (max-width: 900px) {
         font-size: 2em;
     }
-    @media (max-width: 425px) {
+    @media (max-width: 450px) {
         font-size: 1.75em;
     }
 `;
@@ -48,7 +48,7 @@ const SiteSubtitle = styled.h4`
         margin-top: 0.5em;
         font-size: 1.5em;
     }
-    @media (max-width: 425px) {
+    @media (max-width: 450px) {
         font-size: 1em;
     }
 `;
@@ -77,7 +77,7 @@ const MenuButton = styled.button`
     font-family: var(--text-font);
     font-size: 1.5em;
     ${sharedLinkStyles}
-    @media (max-width: 425px) {
+    @media (max-width: 450px) {
         font-size: 1em;
     }
 `;

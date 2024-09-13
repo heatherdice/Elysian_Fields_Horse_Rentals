@@ -63,3 +63,9 @@ footer li {
   text-decoration: none;
   font-size: 1.25em;
 }
+
+@media (max-width: 900px) {
+  .Hero {
+    height: 40vh;
+  }
+}
