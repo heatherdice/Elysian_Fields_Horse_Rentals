@@ -2,6 +2,8 @@ import React from "react";
 import { styled } from "styled-components";
 
 const HeroContainer = styled.header`
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 70vh;
     background-position: 50% 25%;
@@ -12,13 +14,26 @@ const HeroContainer = styled.header`
     }
 `;
 
+const PageTitle = styled.div`
+    align-self: center;
+    font-size: 2.5em;
+    font-weight: lighter;
+    margin-top: 4em;
+    @media (max-width: 900px) {
+        font-size: 2em;
+    }
+    @media (max-width: 600px) {
+        font-size: 1.5em;
+    }
+`;
+
 export default function Hero({ image, homePage, title }) {
     return(
-        <HeroContainer style={{ backgroundImage: `url(${image})` }} className="Hero">
+        <HeroContainer style={{ backgroundImage: `url(${image})` }}>
             {!homePage ? (
-                <div className="hero-text">
+                <PageTitle className="hero-text-home">
                     <h1>{title}</h1>
-                </div>
+                </PageTitle>
             ) : null}
         </HeroContainer>
     )
