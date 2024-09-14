@@ -21,10 +21,6 @@ h2, h4, p, .site-subtitle {
   font-family: var(--text-font);
 }
 
-.hero-text-home {
-  margin-left: 60px;
-}
-
 footer {
   padding: 3.5em;
   display: grid;
