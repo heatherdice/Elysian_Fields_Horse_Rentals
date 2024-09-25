@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 
-const HeroContainer = styled.header`
+const HeroImage = styled.img`
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -29,12 +29,13 @@ const PageTitle = styled.div`
 
 export default function Hero({ image, homePage, title }) {
     return(
-        <HeroContainer style={{ backgroundImage: `url(${image})` }}>
+        <header>
+            <HeroImage style={{ backgroundImage: `url(${image})`, opacity: '0.5' }} />
             {!homePage ? (
-                <PageTitle className="hero-text-home">
+                <PageTitle>
                     <h1>{title}</h1>
                 </PageTitle>
             ) : null}
-        </HeroContainer>
+        </header>
     )
 }
