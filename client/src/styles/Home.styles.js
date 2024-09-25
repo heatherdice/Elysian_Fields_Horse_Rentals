@@ -13,6 +13,15 @@ const HomeSections = styled.section`
     text-align: center;
     column-gap: 3em;
     padding: 3.5em;
+
+    h3 {
+        font-size: 2.5em;
+        font-weight: normal;
+    }
+    
+    p {
+        font-size: 2em;
+    }
 `;
 
 // "blurb" with link to horse page
@@ -20,6 +29,15 @@ const FirstSection = styled(HomeSections)`
     color: var(--platinum);
     background-color: var(--hunter-green);
     grid-template-columns: 2fr 3fr;
+
+    h3, p {
+        margin: 0;
+        place-self: center;
+    }
+
+    p {
+        padding: 0 3em;
+    }
 `;
 
 // testimonials
@@ -35,6 +53,11 @@ const SecondSection = styled(HomeSections)`
     background-blend-mode: overlay;
     box-sizing: border-box;
     background-image: url(${horseArcherHome});
+
+    h3 {
+        grid-column: span 2;
+        margin: 0;
+    }
 `;
 
 export {
