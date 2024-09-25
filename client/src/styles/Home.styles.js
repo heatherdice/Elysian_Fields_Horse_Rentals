@@ -13,14 +13,25 @@ const HomeSections = styled.section`
     text-align: center;
     column-gap: 3em;
     padding: 3.5em;
-
     h3 {
         font-size: 2.5em;
         font-weight: normal;
     }
-    
     p {
-        font-size: 2em;
+        font-size: 1.5em;
+    }
+    @media (max-width: 900px) {
+        padding: 2em;
+        column-gap: 1em;
+        h3 {
+            font-size: 1.75em;
+        }
+        p {
+            font-size: 1em;
+        }
+    }
+    @media (max-width: 450px) {
+        padding: 1em;
     }
 `;
 
@@ -29,14 +40,20 @@ const FirstSection = styled(HomeSections)`
     color: var(--platinum);
     background-color: var(--hunter-green);
     grid-template-columns: 2fr 3fr;
-
     h3, p {
         margin: 0;
         place-self: center;
     }
-
     p {
         padding: 0 3em;
+    }
+    a {
+        color: var(--platinum);
+    }
+    @media (max-width: 900px) {
+        p {
+            padding: 0 1.5em;
+        }
     }
 `;
 
@@ -53,7 +70,6 @@ const SecondSection = styled(HomeSections)`
     background-blend-mode: overlay;
     box-sizing: border-box;
     background-image: url(${horseArcherHome});
-
     h3 {
         grid-column: span 2;
         margin: 0;

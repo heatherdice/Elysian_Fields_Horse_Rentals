@@ -19,7 +19,8 @@ export default function Home() {
                         <br />
                         <br />
 
-                        <Link to="/about" style={{ color: "var(--platinum)" }}>Meet Our Horses</Link>
+                        {/* make this a button? */}
+                        <Link to="/about">Meet Our Horses</Link>
                     </p>
                 </FirstSection>
 
