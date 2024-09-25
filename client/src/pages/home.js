@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/home.css";
 import Hero from "../components/Hero";
 import homeHero from "../assets/homeHero.jpg";
 import { HomePage, FirstSection, SecondSection } from "../styles/Home.styles";
