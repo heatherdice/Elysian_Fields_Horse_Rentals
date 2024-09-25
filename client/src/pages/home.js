@@ -2,8 +2,7 @@ import React from "react";
 import "../styles/home.css";
 import Hero from "../components/Hero";
 import homeHero from "../assets/homeHero.jpg";
-import horseArcherHome from "../assets/horseArcherHome.jpg";
-import Footer from "../components/Footer";
+import { HomePage, FirstSection, SecondSection } from "../styles/Home.styles";
 import { Link } from "react-router-dom";
 
 export default function Home() {    
@@ -11,8 +10,8 @@ export default function Home() {
         <>
             <Hero image={homeHero} homePage={true} />
 
-            <main className="Home">
-                <section className="home-section-1">
+            <HomePage>
+                <FirstSection>
                     <h3>
                         Horses suitable for IHA, IHSA, mounted archery, and more!
                     </h3>
@@ -21,11 +20,11 @@ export default function Home() {
                         <br />
                         <br />
 
-                        <Link to="/about" className="horses-link">Meet Our Horses</Link>
+                        <Link to="/about" style={{ color: "var(--platinum)" }}>Meet Our Horses</Link>
                     </p>
-                </section>
+                </FirstSection>
 
-                <section className="testimonials" style={{ backgroundImage: `url(${horseArcherHome})` }}>
+                <SecondSection>
                     <h3>Testimonials</h3>
                     <p>
                         "Kellie's horses are the calmest I've ever seen! This was my first mounted archery lesson and I never had to worry that a horse would spook. He took great care of me and I had a blast!"
@@ -38,8 +37,8 @@ export default function Home() {
                         <br />
                         - Reviewer 2
                     </p>
-                </section>
-            </main>
+                </SecondSection>
+            </HomePage>
         </>
     )
 }
