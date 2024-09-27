@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Footer({ backgroundColor, textColor }) {
     return (
         <footer style={{ backgroundColor: backgroundColor, color: textColor }}>
-            <div>
+            <div className="site-title-footer">
                 <h3>Elysian Fields</h3>
                 <h4>Horse Rentals</h4>
             </div>
