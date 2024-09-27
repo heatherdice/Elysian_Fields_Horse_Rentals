@@ -31,6 +31,7 @@ const HomeSections = styled.section`
         }
     }
     @media (max-width: 450px) {
+        row-gap: 1em;
         padding: 1em;
     }
 `;
@@ -55,6 +56,12 @@ const FirstSection = styled(HomeSections)`
             padding: 0 1.5em;
         }
     }
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+        p {
+            padding: 1.5em;
+        }
+    }
 `;
 
 // testimonials
@@ -73,6 +80,12 @@ const SecondSection = styled(HomeSections)`
     h3 {
         grid-column: span 2;
         margin: 0;
+    }
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+        h3 {
+            grid-column: span 1;
+        }
     }
 `;
 
