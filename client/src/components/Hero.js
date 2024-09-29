@@ -1,19 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
 
-const HeroImage = styled.img`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 70vh;
-    background-position: 50% 25%;
-    background-size: cover;
-    background-repeat: no repeat;
-    @media (max-width: 900px) {
-        height: 40vh;
-    }
-`;
-
 const PageTitle = styled.div`
     align-self: center;
     font-size: 2.5em;
@@ -28,9 +15,24 @@ const PageTitle = styled.div`
 `;
 
 export default function Hero({ image, homePage, title }) {
+    const HeroImage = styled.img`
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        background-image: url(${image});
+        opacity: ${!homePage ? "0.5" : "1"};
+        background-position: 50% 25%;
+        background-size: cover;
+        background-repeat: no repeat;
+        @media (max-width: 900px) {
+            height: 40vh;
+        }
+    `;
+
     return(
         <header>
-            <HeroImage style={{ backgroundImage: `url(${image})`, opacity: '0.5' }} />
+            <HeroImage />
             {!homePage ? (
                 <PageTitle>
                     <h1>{title}</h1>
