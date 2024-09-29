@@ -11,6 +11,7 @@ const sharedLinkStyles = css`
 `;
 
 const NavbarContainer = styled.nav`
+    z-index: 2;
     display: flex;
     width: 100%;
     justify-content: space-between;
