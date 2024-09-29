@@ -36,7 +36,7 @@ const SiteTitle = styled.a`
         font-size: 2em;
     }
     @media (max-width: 450px) {
-        font-size: 1.75em;
+        font-size: 1.25em;
     }
 `;
 
@@ -66,7 +66,7 @@ const NavLinks = styled.div`
 
 // mobile nav styling
 const DropdownContainer = styled.div`
-    margin-top: 2em;
+    margin-top: 1.25em;
     margin-right: 1.875em;
     display: flex;
     flex-direction: column;
