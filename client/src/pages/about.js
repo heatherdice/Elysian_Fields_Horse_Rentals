@@ -24,11 +24,17 @@ export default function about() {
                 <AffiliateLinks>
                     <h3>Our Affiliates</h3>
 
-                    <AffiliateLogos src={ulhaLogo} alt="United Liberty Horse Archers" />
+                    <a href="https://www.facebook.com/UnitedLibertyHorseArchers/" target="_blank">
+                        <AffiliateLogos src={ulhaLogo} alt="United Liberty Horse Archers" />
+                    </a>
 
-                    <AffiliateLogos src={ieaLogo} alt="Interscholastic Equestrian Association" />
+                    <a href="https://www.rideiea.org/" target="_blank">
+                        <AffiliateLogos src={ieaLogo} alt="Interscholastic Equestrian Association" />
+                    </a>
 
-                    <AffiliateLogos src={ihsaLogo} alt="Intercollegiate Horse Shows Association" />
+                    <a href="https://www.ihsainc.com/home" target="_blank">
+                        <AffiliateLogos src={ihsaLogo} alt="Intercollegiate Horse Shows Association" />
+                    </a>
                 </AffiliateLinks>
             </AboutPage>
 

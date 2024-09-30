@@ -54,9 +54,18 @@ const AffiliateLinks = styled(AboutSections)`
     background-color: var(--champagne-pink);
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 3em;
+    justify-items: center;
+    align-items: center;
     h3 {
         grid-column: span 3;
         text-align: center;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
     }
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
@@ -67,12 +76,12 @@ const AffiliateLinks = styled(AboutSections)`
     }
 `;
 
+// may want to consider making these buttons?
 const AffiliateLogos = styled.img`
-    grid-column: span 1;
+    max-width: 150px;
     width: 100%;
     height: auto;
-    max-width: 150px;
-    place-self: center;
+    object-fit: contain;
 `;
 
 export {
