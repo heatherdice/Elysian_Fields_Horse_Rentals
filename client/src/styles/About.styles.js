@@ -64,7 +64,7 @@ const AffiliateLinks = styled(AboutSections)`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: auto;
         height: auto;
     }
     @media (max-width: 700px) {
@@ -78,10 +78,14 @@ const AffiliateLinks = styled(AboutSections)`
 
 // may want to consider making these buttons?
 const AffiliateLogos = styled.img`
+    cursor: pointer;
     max-width: 150px;
     width: 100%;
     height: auto;
     object-fit: contain;
+    &:hover {
+        transform: scale(1.2);
+    }
 `;
 
 export {
