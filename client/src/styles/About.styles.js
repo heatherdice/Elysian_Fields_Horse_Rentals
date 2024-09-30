@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 const AboutPage = styled.main`
     overflow: hidden;
@@ -7,6 +8,7 @@ const AboutPage = styled.main`
 
 const AboutSections = styled.section`
     display: grid;
+    padding: 2em;
     h3 {
         font-size: 2.5em;
         font-weight: normal;
@@ -17,7 +19,6 @@ const AboutSections = styled.section`
         font-size: 1.5em;
     }
     @media (max-width: 900px) {
-        padding: 2em;
         column-gap: 1em;
         p {
             font-size: 1em;
@@ -45,18 +46,30 @@ const AboutHorses = styled(AboutSections)`
     justify-items: center;
     h3 {
         grid-column: span 2;
-        place-self: center;
     }
     h4 {
         font-family: var(--title-font) !important;
         font-size: 2em;
         font-weight: normal;
-        margin-top: 1em;
-        margin-bottom: 0;
+        margin: 1em 0 0;
     }
-    img {
-        height: 60%;
+`;
+
+const StyledLink = styled(Link)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
     }
+`;
+
+const StyledImage = styled.img`
+    height: 60%;
+    object-fit: cover;
 `;
 
 const AffiliateLinks = styled(AboutSections)`
@@ -75,8 +88,6 @@ const AffiliateLinks = styled(AboutSections)`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: auto;
-        height: auto;
     }
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
@@ -104,6 +115,8 @@ export {
     AboutSections,
     AboutInfo,
     AboutHorses,
+    StyledLink,
+    StyledImage,
     AffiliateLinks,
     AffiliateLogos
 }

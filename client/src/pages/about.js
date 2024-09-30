@@ -6,7 +6,7 @@ import ieaLogo from "../assets/iea.png";
 import ihsaLogo from "../assets/ihsalogo.png";
 import archeryHorse from "../assets/meetArchery.png";
 import jumperHorse from "../assets/meetJumper.png";
-import { AboutPage, AboutInfo, AboutHorses, AffiliateLinks, AffiliateLogos } from "../styles/About.styles";
+import { AboutPage, AboutInfo, AboutHorses, StyledLink, StyledImage, AffiliateLinks, AffiliateLogos } from "../styles/About.styles";
 
 export default function about() {
     return (
@@ -18,19 +18,22 @@ export default function about() {
 
                 </AboutInfo>
 
+                {/* Meet Our Horses */}
                 <AboutHorses>
                     <h3>Meet Our Horses</h3>
 
-                    <div>
-                        <img src={archeryHorse} alt="archery horses" />
+                    <StyledLink href="#archery-horses">
+                        <StyledImage src={archeryHorse} alt="archery horses" />
                         <h4>Archery Horses</h4>
-                    </div>
-                    <div>
-                        <img src={jumperHorse} alt="jumper horses" />
+                    </StyledLink>
+
+                    <StyledLink href="#jumper-horses">
+                        <StyledImage src={jumperHorse} alt="jumper horses" />
                         <h4>Jumper Horses</h4>
-                    </div>
+                    </StyledLink>
                 </AboutHorses>
 
+                {/* Our Affiliates */}
                 <AffiliateLinks>
                     <h3>Our Affiliates</h3>
 
