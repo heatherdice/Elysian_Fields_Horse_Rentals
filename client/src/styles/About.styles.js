@@ -15,11 +15,20 @@ const AboutSections = styled.section`
         place-self: center;
         margin: 0;
     }
+    h4 {
+        font-family: var(--title-font) !important;
+        font-size: 2em;
+        font-weight: normal;
+        margin: 1em 0 0;
+    }
     p {
         font-size: 1.5em;
     }
     @media (max-width: 900px) {
         column-gap: 1em;
+        h4 {
+            font-size: 1.5em;
+        }
         p {
             font-size: 1em;
         }
@@ -38,7 +47,7 @@ const AboutInfo = styled(AboutSections)`
 `;
 
 const AboutHorses = styled(AboutSections)`
-    height: 75vh;
+    min-height: 75vh;
     color: var(--champagne-pink);
     background-color: var(--english-violet);
     grid-template-columns: 1fr 1fr;
@@ -47,11 +56,14 @@ const AboutHorses = styled(AboutSections)`
     h3 {
         grid-column: span 2;
     }
-    h4 {
-        font-family: var(--title-font) !important;
-        font-size: 2em;
-        font-weight: normal;
-        margin: 1em 0 0;
+    @media (max-width: 900px) {
+        column-gap: 1em;
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        h3 {
+            grid-column: span 1;
+        }
     }
 `;
 
@@ -59,17 +71,28 @@ const StyledLink = styled(Link)`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
     &:hover {
         opacity: 0.8;
+        transform: scale(1.1);
+    }
+    @media (max-width: 600px) {
+        margin-top: 1em;
     }
 `;
 
 const StyledImage = styled.img`
-    height: 60%;
+    height: auto;
+    width: 100%
+    max-width: 400px;
     object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    @media (max-width: 900px) {
+        max-width: 250px;
+    }
 `;
 
 const AffiliateLinks = styled(AboutSections)`
