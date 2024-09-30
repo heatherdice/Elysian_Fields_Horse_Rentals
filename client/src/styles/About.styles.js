@@ -37,14 +37,25 @@ const AboutInfo = styled(AboutSections)`
 `;
 
 const AboutHorses = styled(AboutSections)`
-    height: 70vh;
+    height: 75vh;
     color: var(--champagne-pink);
     background-color: var(--english-violet);
     grid-template-columns: 1fr 1fr;
     column-gap: 3em;
+    justify-items: center;
     h3 {
         grid-column: span 2;
         place-self: center;
+    }
+    h4 {
+        font-family: var(--title-font) !important;
+        font-size: 2em;
+        font-weight: normal;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+    img {
+        height: 60%;
     }
 `;
 

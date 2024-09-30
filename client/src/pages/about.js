@@ -4,6 +4,8 @@ import aboutHero from "../assets/aboutHero.jpg";
 import ulhaLogo from "../assets/ulhalogo.png";
 import ieaLogo from "../assets/iea.png";
 import ihsaLogo from "../assets/ihsalogo.png";
+import archeryHorse from "../assets/meetArchery.png";
+import jumperHorse from "../assets/meetJumper.png";
 import { AboutPage, AboutInfo, AboutHorses, AffiliateLinks, AffiliateLogos } from "../styles/About.styles";
 
 export default function about() {
@@ -19,6 +21,14 @@ export default function about() {
                 <AboutHorses>
                     <h3>Meet Our Horses</h3>
 
+                    <div>
+                        <img src={archeryHorse} alt="archery horses" />
+                        <h4>Archery Horses</h4>
+                    </div>
+                    <div>
+                        <img src={jumperHorse} alt="jumper horses" />
+                        <h4>Jumper Horses</h4>
+                    </div>
                 </AboutHorses>
 
                 <AffiliateLinks>
