@@ -12,7 +12,7 @@ export default function Horses() {
 
             <AllHorsesPage>
                 <FilterHorsesRow>
-                    <Link to="#archery-horses">
+                    <Link to="/archery-horses">
                         See Archery Horses
                     </Link>
 
