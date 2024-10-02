@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-const AllHorsesPage = styled.main`
+const HorsesPage = styled.main`
     overflow: hidden;
     width: 100%;
     background-color: var(--cambridge-blue);
@@ -20,6 +20,6 @@ const FilterHorsesRow = styled.section`
 `;
 
 export {
-    AllHorsesPage,
+    HorsesPage,
     FilterHorsesRow
 }
