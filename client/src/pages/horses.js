@@ -16,7 +16,7 @@ export default function Horses() {
                         See Archery Horses
                     </Link>
 
-                    <Link to="#jumper-horses">
+                    <Link to="/jumper-horses">
                         See Jumper Horses
                     </Link>
                 </FilterHorsesRow>

@@ -28,13 +28,13 @@ export default function Footer({ backgroundColor, textColor }) {
                 <h3>Book</h3>
                 <ul>
                     <li>
-                        <NavLink to="/book-a-horse" className="footer-link" style={{ color: textColor }}>All Horses</NavLink>
+                        <NavLink to="/horses" className="footer-link" style={{ color: textColor }}>All Horses</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/book-a-horse/archery" className="footer-link" style={{ color: textColor }}>Archery Horses</NavLink>
+                        <NavLink to="/archery-horses" className="footer-link" style={{ color: textColor }}>Archery Horses</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/book-a-horse/jumper" className="footer-link" style={{ color: textColor }}>Jumper Horses</NavLink>
+                        <NavLink to="/jumper-horses" className="footer-link" style={{ color: textColor }}>Jumper Horses</NavLink>
                     </li>
                 </ul>
             </div>
