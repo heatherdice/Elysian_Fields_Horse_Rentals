@@ -5,8 +5,6 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Horses from "./pages/horses";
-import ArcheryHorses from "./pages/archeryHorses.js";
-import JumperHorses from "./pages/jumperHorses.js";
 import Footer from "./components/Footer";
 
 function App() {
@@ -18,9 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/horses" element={<Horses />} />
-          <Route path="/archery-horses" element={<ArcheryHorses />} />
-          <Route path="/jumper-horses" element={<JumperHorses />} />
+          <Route path="/horses" component={<Horses />} />
+          <Route path="/horses/:category" element={<Horses />} />
 
         </Routes>
 

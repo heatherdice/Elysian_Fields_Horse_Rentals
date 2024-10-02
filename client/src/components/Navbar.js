@@ -30,7 +30,7 @@ export default function Navbar() {
 
     const navLinks = [
         {link: '/about', title: 'About'},
-        {link: '/horses', title: 'Book a Horse'},
+        {link: '/horses/all', title: 'Book a Horse'},
         {link: '/event-calendar', title: 'Event Calendar'}
     ];
 
