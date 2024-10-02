@@ -16,6 +16,9 @@ const FilterHorsesRow = styled.section`
         font-family: var(--title-font) !important;
         font-size: 2.5em;
         text-decoration: none;
+        &:hover {
+            text-decoration: underline 0.08em var(--platinum);
+        }
     }
 `;
 
