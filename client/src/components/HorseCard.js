@@ -1,10 +1,15 @@
 import React from "react";
-import { CardContainer } from "../styles/HorseCard.styles";
+import { CardContainer, CardImage } from "../styles/HorseCard.styles";
+import DummyImage from "../assets/meetArchery.png";
 
 export default function HorseCard() {
     return (
+        // all images & text currently dummy data for sake of styling
         <CardContainer>
-            This is a sample card
+            <CardImage src={DummyImage} />
+
+            <h3>Dummy Name</h3>
+
         </CardContainer>
     )
 }
