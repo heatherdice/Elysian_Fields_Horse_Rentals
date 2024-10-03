@@ -4,7 +4,8 @@ import horsesHero from "../assets/horsesHero.jpg";
 import archeryHorsesHero from "../assets/archeryHorse.jpg";
 import jumperHorsesHero from "../assets/jumperHorse.jpg";
 import { Link, useParams } from "react-router-dom";
-import { HorsesPage, FilterHorsesRow } from "../styles/horses.styles.js";
+import { HorsesPage, FilterHorsesRow, HorseCardSection } from "../styles/horses.styles.js";
+import HorseCard from "../components/HorseCard.js";
 
 
 export default function Horses() {
@@ -55,6 +56,10 @@ export default function Horses() {
                 <FilterHorsesRow>
                     {renderLinks()}
                 </FilterHorsesRow>
+
+                <HorseCardSection>
+                    <HorseCard />
+                </HorseCardSection>
             </HorsesPage>
         </>
     )

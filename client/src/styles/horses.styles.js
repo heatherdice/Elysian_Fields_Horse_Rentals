@@ -22,7 +22,15 @@ const FilterHorsesRow = styled.section`
     }
 `;
 
+const HorseCardSection = styled.section`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+`;
+
 export {
     HorsesPage,
-    FilterHorsesRow
+    FilterHorsesRow,
+    HorseCardSection
 }
