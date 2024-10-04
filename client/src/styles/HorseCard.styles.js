@@ -19,11 +19,12 @@ const CardImage = styled.img`
 const HorseInfo = styled.section`
     display: flex;
     flex-direction: column;
-    padding: 0 1em;
+    padding-left: 1.5em;
 `;
 
 const HorseName = styled.h3`
     font-size: 2em;
+    margin: 0;
 `;
 
 const HorseStats = styled.ul`
@@ -32,10 +33,12 @@ const HorseStats = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0;
 `;
 
 const HorseBlurb = styled.p`
     font-size: 1.5em;
+    margin: 0;
 `;
 
 export {
