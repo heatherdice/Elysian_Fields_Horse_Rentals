@@ -21,7 +21,6 @@ export default function HorseCard() {
                     This is a sample paragraph. It will eventually contain information about the horse. It may talk about the horse's temperment, achievements, and/or personality.
                 </HorseBlurb>
             </HorseInfo>
-
         </CardContainer>
     )
 }

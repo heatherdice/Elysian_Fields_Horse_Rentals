@@ -37,7 +37,7 @@ const HorseStats = styled.ul`
 `;
 
 const HorseBlurb = styled.p`
-    font-size: 1.5em;
+    font-size: 1.25em;
     margin: 0;
 `;
 
