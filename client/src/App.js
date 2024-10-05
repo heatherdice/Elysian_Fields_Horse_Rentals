@@ -6,6 +6,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Horses from "./pages/horses";
 import Calendar from "./pages/calendar";
+import Admin from "./pages/admin";
 import Footer from "./components/Footer";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/horses" component={<Horses />} />
           <Route path="/horses/:category" element={<Horses />} />
           <Route path="/calendar" element={<Calendar />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
 
         <Footer backgroundColor="var(--english-violet)" textColor="var(--platinum)" />
