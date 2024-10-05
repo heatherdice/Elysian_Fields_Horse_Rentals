@@ -19,7 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/horses" component={<Horses />} />
           <Route path="/horses/:category" element={<Horses />} />
-          <Route path="/calendar" element={Calendar} />
+          <Route path="/calendar" element={<Calendar />} />
         </Routes>
 
         <Footer backgroundColor="var(--english-violet)" textColor="var(--platinum)" />
