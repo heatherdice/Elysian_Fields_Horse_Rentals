@@ -31,7 +31,7 @@ export default function Navbar() {
     const navLinks = [
         {link: '/about', title: 'About'},
         {link: '/horses/all', title: 'Book a Horse'},
-        {link: '/event-calendar', title: 'Event Calendar'}
+        {link: '/calendar', title: 'Event Calendar'}
     ];
 
     return (

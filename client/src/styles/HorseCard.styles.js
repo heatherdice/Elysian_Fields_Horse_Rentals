@@ -9,6 +9,7 @@ const CardContainer = styled.article`
     margin-bottom: 1.5em;
     display: flex;
     flex-direction: row;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
 `;
 
 const CardImage = styled.img`
