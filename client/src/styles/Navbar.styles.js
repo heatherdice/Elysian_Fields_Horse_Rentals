@@ -67,22 +67,18 @@ const NavLinks = styled.div`
 // animations for mobile dropdown
 const SlideIn = keyframes`
     from {
-        transform: translateX(-8em);
-        max-height: 0;
+        transform: translateX(8em);
     }
     to {
         transform: translateX(0);
-        max-height: 12.5em;
     }
 ;`
 const SlideOut = keyframes`
     from {
-        transform: translateX(3em);
-        max-height: 12.5em;
+        transform: translateX(0em);
     }
     to {
-        transform: translateX(-8em);
-        max-height: 0;
+        transform: translateX(15em);
     }
 ;`
 
@@ -111,7 +107,7 @@ const DropdownMenu = styled.div`
     background-color: var(--champagne-pink);
     border-radius: 3px;
     box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
-    animation: 
+    animation: ${({ isOpen }) => (isOpen ? SlideIn : SlideOut)} 0.5s ease forwards;
     a {
         ${sharedLinkStyles}
         font-size: 1.25em;
