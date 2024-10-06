@@ -113,6 +113,11 @@ const DropdownMenu = styled.div`
         font-size: 1.25em;
         padding: .75em;
     }
+    @media (max-width: 500px) {
+        a {
+            font-size: 1em;
+        }
+    }
 `;
 
 export {
