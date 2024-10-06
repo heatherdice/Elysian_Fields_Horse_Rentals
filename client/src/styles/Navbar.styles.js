@@ -1,4 +1,4 @@
-import { styled, css } from "styled-components";
+import { styled, css, keyframes } from "styled-components";
 
 // consolidated styling
 const sharedLinkStyles = css`
@@ -64,6 +64,28 @@ const NavLinks = styled.div`
     }
 `;
 
+// animations for mobile dropdown
+const SlideIn = keyframes`
+    from {
+        transform: translateX(-8em);
+        max-height: 0;
+    }
+    to {
+        transform: translateX(0);
+        max-height: 12.5em;
+    }
+;`
+const SlideOut = keyframes`
+    from {
+        transform: translateX(3em);
+        max-height: 12.5em;
+    }
+    to {
+        transform: translateX(-8em);
+        max-height: 0;
+    }
+;`
+
 // mobile nav styling
 const DropdownContainer = styled.div`
     margin-top: 1.25em;
@@ -89,6 +111,7 @@ const DropdownMenu = styled.div`
     background-color: var(--champagne-pink);
     border-radius: 3px;
     box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    animation: 
     a {
         ${sharedLinkStyles}
         font-size: 1.25em;
@@ -102,6 +125,8 @@ export {
     SiteTitle,
     SiteSubtitle,
     NavLinks,
+    SlideIn,
+    SlideOut,
     DropdownContainer,
     MenuButton,
     DropdownMenu
