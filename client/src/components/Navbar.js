@@ -55,15 +55,13 @@ export default function Navbar() {
                         Menu
                     </MenuButton>
 
-                    {dropdownVisible && (
-                        <DropdownMenu>
+                        <DropdownMenu isOpen={dropdownVisible}>
                             {navLinks.map((navbar) =>
                                 <NavLink to={navbar.link}>
                                     {navbar.title}
                                 </NavLink>
                             )}
                         </DropdownMenu>
-                    )}
                 </DropdownContainer>
             )}
         </NavbarContainer>
